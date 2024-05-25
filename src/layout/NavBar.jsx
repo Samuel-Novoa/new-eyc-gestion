@@ -22,6 +22,7 @@ function NavBar() {
   return (
     <div>
       <ul>
+        <li><Link to="/home">E&C - Gestion</Link></li>
         <li>
           <Link to="/clientes">Clientes</Link>
         </li>
