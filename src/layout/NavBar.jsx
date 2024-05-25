@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 import { useNavigate } from "react-router-dom";
+// Styles
+import "../styles/navbar.css";
+// Images
+import logoutImg from "../assets/logout.png";
+import logoImg from "../assets/logo.png";
 
 function NavBar() {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        // Sign-out successful.
         navigate("/");
         console.log("Signed out successfully");
       })
@@ -19,25 +24,53 @@ function NavBar() {
       });
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div>
-      <ul>
-        <li><Link to="/home">E&C - Gestion</Link></li>
-        <li>
-          <Link to="/clientes">Clientes</Link>
-        </li>
-        <li>
-          <Link to="/fichas">Fichas</Link>
-        </li>
-        <li>
-          <Link to="/personal">Personal</Link>
-        </li>
-        <li>
-          <Link to="/servicios">Servicios</Link>
-        </li>
-        <li><a onClick={handleLogout}>LogOut</a></li>
-      </ul>
-    </div>
+    <nav>
+      <div className="navbar-header">
+        <Link to="/home" className="navbar-brand">
+          <img src={logoImg} alt="Logo Img" height={"50px"} />
+          <h1>E&C - Gestión</h1>
+        </Link>
+        <button className="navbar-toggle" onClick={toggleMenu}>
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
+        </button>
+      </div>
+      <div className={`navbar-collapse ${isMenuOpen ? "show" : ""}`}>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to="/fichas" className="nav-link">
+              Fichas
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/clientes" className="nav-link">
+              Clientes
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/personal" className="nav-link">
+              Personal
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/servicios" className="nav-link">
+              Servicios
+            </Link>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link" onClick={handleLogout}>
+              <img src={logoutImg} alt="Logout Icon" height={"20px"} />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 

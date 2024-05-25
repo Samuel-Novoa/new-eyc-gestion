@@ -1,0 +1,132 @@
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-gold-light: #f4df56;
+  --color-gold-dark: #f2c744;
+  --color-brown: #c29c46;
+  --color-dark-light: #120f0c;
+  --color-dark: #050006;
+  --color-gray: #ccccccd2;
+}
+
+/* Estilos para fijar el nav y abarcar todo el ancho */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(5, 0, 6, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(7.6px);
+  padding: 0rem 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Agregar un margen superior equivalente a la altura del nav */
+body {
+  margin-top: 60px;
+}
+
+/* Estilos del navbar */
+.navbar-brand {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-white);
+  margin: 4px 0;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0.5rem 1.2rem;
+  align-content: center;
+}
+
+.nav-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  left: 125%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 130%;
+  border-radius: 100px;
+  background-color: var(--color-gray);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.navbar-collapse {
+  align-content: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  nav {
+    display: block;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: block;
+  }
+
+  .nav-item {
+    margin: 1.5rem 0rem;
+  }
+
+  .nav-item:not(:last-child)::after {
+    content: none; /* Eliminar la línea separadora en modo móvil */
+  }
+}
