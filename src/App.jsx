@@ -18,13 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        {/* <Route path="/" element={<Login />} /> */}
-        {/* <Route path="fichas" element={<Fichas />} /> */}
+        <Route path="/fichas" element={<Fichas />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        {/* <Route path="personal" element={<Personal /> } /> */}
-        {/* <Route path="clientes" element={<Clientes />} /> */}
-        {/* <Route path="servicios" element={<Servicios />} /> */}
+        <Route path="/personal" element={<Personal /> } />
+        <Route path="/clientes" element={<Clientes />} />
+        <Route path="/servicios" element={<Servicios />} />
       </Routes>
     </div>
   );
