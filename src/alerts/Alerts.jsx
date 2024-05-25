@@ -1,9 +1,13 @@
-import React from 'react'
+import { handleErrorsLogin } from "./Utils";
 
-function Alerts() {
+const Alerts = ({ errorCode }) => {
+  const errorMessage = handleErrorsLogin(errorCode)
+
   return (
-    <div>Alerts</div>
+    <div className="alert">
+      <p>{errorMessage}</p>
+      {/* Diseno va aca */}
+    </div>
   )
 }
-
 export default Alerts
