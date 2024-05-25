@@ -11,7 +11,6 @@ const Login = () => {
   const [errorCode, setErrorCode] = useState("");
   // const [errorMessage, setErrorMessage] = useState("");
 
-
   const onLogin = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
