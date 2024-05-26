@@ -52,7 +52,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <section>
       <div className="columns">
         <div className="column">
           <img src={logoImg} alt="Logo Img" height={"100px"}/>
@@ -97,7 +97,7 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

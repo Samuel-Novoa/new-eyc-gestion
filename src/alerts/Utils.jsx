@@ -52,7 +52,10 @@ export const handleErrorsLogin = (errorCode) => {
         "Estamos experimentando problemas con la conexion, intentelo nuevamente mas tarde";
       break;
     case "auth/popup-closed-by-user":
-      errorMessage = "Error al conectarse con la cuenta de google, intentelo nuevamente mas tarde";
+      errorMessage =
+        "Error al conectarse con la cuenta de google, intentelo nuevamente mas tarde";
+    case "auth/missing-password":
+      errorMessage = "Hace falta una contrasena";
     default:
       errorMessage = "Error desconocido. Por favor, inténtalo de nuevo.";
   }

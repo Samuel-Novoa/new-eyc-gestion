@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDzG4P1G20ijHy1x88QJV-9QeGIHJ1ed5E",
@@ -11,5 +11,11 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export default app;
+const auth = getAuth(app);
+
+// Configura Firebase Auth para mantener la sesión activa después de una recarga
+setPersistence(auth, browserLocalPersistence).catch((error) => {
+  console.error("Error setting persistence:", error);
+});
+
+export { auth };

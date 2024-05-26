@@ -14,10 +14,10 @@
   align-content: center;
   text-align: left !important;
 }
-body,
-html {
-  height: 100%;
-  margin: 0;
+
+section {
+  height: 100% !important;
+  margin: 0 !important;
 }
 
 #tittle {

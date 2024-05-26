@@ -5,25 +5,62 @@ import "./App.css";
 import Clientes from "./pages/Clientes";
 import Fichas from "./pages/Fichas";
 import Servicios from "./pages/Servicios";
-import Personal from "./pages/Personal"; 
+import Personal from "./pages/Personal";
 // Login
 import Login from "./login/Login";
 import SignUp from "./login/SignUp";
 import Home from "./HomePage";
 
-function App() {
+import PrivateRoute from "./PrivateRoute";
 
+function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/fichas" element={<Fichas />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/personal" element={<Personal /> } />
-        <Route path="/clientes" element={<Clientes />} />
-        <Route path="/servicios" element={<Servicios />} />
+        {/* Rutas privadas */}
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/fichas"
+          element={
+            <PrivateRoute>
+              <Fichas />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/personal"
+          element={
+            <PrivateRoute>
+              <Personal />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/clientes"
+          element={
+            <PrivateRoute>
+              <Clientes />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/servicios"
+          element={
+            <PrivateRoute>
+              <Servicios />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );
