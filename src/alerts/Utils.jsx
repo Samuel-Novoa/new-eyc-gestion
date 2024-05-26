@@ -51,6 +51,8 @@ export const handleErrorsLogin = (errorCode) => {
       errorMessage =
         "Estamos experimentando problemas con la conexion, intentelo nuevamente mas tarde";
       break;
+    case "auth/popup-closed-by-user":
+      errorMessage = "Error al conectarse con la cuenta de google, intentelo nuevamente mas tarde";
     default:
       errorMessage = "Error desconocido. Por favor, inténtalo de nuevo.";
   }
