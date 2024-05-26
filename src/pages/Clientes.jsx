@@ -11,7 +11,7 @@ function Clientes() {
       <div className="page-header" id="actions_header">
         <h1>Clientes</h1>
         <div className="page-actions-buttons">
-          <button className="button-action">
+          <button className="button-action" id="button_action_filter">
             <img src={filterImg} alt="Filter Image" height={"15px"} />
             Filtrar
           </button>

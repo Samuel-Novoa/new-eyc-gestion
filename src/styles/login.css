@@ -72,7 +72,7 @@ input:hover {
 }
 
 /* Buttons */
-button {
+#action_buttons > button {
   background-color: var(--color-gold-dark);
   color: var(--color-dark);
   font-size: 0.9rem;

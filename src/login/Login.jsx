@@ -85,7 +85,7 @@ const Login = () => {
 
             {/* Message Error */}
             {errorCode && <Alerts errorCode={errorCode} />}
-
+ 
             <div id="action_buttons">
               <button onClick={onLogin} id="action_button_login">Ingresar</button>
               <button onClick={signInWithGoogle} id="action_button_login_with_google">Ingresar con Google</button>
