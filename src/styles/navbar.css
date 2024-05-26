@@ -98,9 +98,10 @@ body {
   align-content: center;
 }
 
-/* Estilos responsivos */
+/* Responsive Styles */
 @media (max-width: 768px) {
   nav {
+    padding: 10px;
     display: block;
   }
   .navbar-toggle {

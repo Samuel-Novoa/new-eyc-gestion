@@ -1,0 +1,65 @@
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-gold-light: #f4df56;
+  --color-gold-dark: #f2c744;
+  --color-brown: #c29c46;
+  --color-dark-light: #120f0c;
+  --color-dark: #050006;
+  --color-gray: #ccccccd2;
+}
+
+.page-header {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.page-header > h1 {
+  color: var(--color-gold-dark);
+}
+
+.button-action {
+  font-size: 0.9rem;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  color: var(--color-dark);
+  display: flex;
+  gap: 10px;
+  border: 2px solid var(--color-white);
+  transition: 0.5s;
+  line-height: 0.9rem;
+}
+
+.page-actions-buttons {
+  align-self: center;
+  gap: 10px;
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+}
+
+.button-action:hover {
+  border: 2px solid var(--color-gold-dark);
+  transition: 0.5s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-header {
+    justify-content: space-between;
+  }
+
+  .button-action {
+    font-size: 0px;
+    overflow: hidden;
+    height: 25px;
+    padding: 0px 0px 0px 10px;
+  }
+
+  .button-action img {
+    width: auto;
+    justify-content: center;
+    align-self: center;
+  }
+}
