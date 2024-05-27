@@ -10,7 +10,7 @@ import Alerts from "../alerts/Alerts";
 // Styles
 import "../styles/login.css";
 // Images
-import logoImg from "../assets/logo.png";
+import logoImg from "../assets/logo.svg";
 
 const Login = () => {
   const navigate = useNavigate();

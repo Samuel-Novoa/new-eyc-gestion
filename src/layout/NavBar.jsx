@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 // Styles
 import "../styles/navbar.css";
 // Images
-import logoutImg from "../assets/logout.png";
-import logoImg from "../assets/logo.png";
+import logoutImg from "../assets/logout.svg";
+import logoImg from "../assets/logo.svg";
 
 function NavBar() {
   const navigate = useNavigate();

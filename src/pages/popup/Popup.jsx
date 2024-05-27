@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/popup/popup.css";
 // Images
-import closeImg from "../../assets/close.png";
+import closeImg from "../../assets/close.svg";
 
 function Popup(props) {
   return props.trigger ? (

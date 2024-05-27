@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Main from "../layout/Main";
 // Images
-import clockImg from "../assets/clock.png";
-import filterImg from "../assets/filter.png";
-import addImg from "../assets/add.png";
-import saveImg from "../assets/save.png";
+import clockImg from "../assets/clock.svg";
+import filterImg from "../assets/filter.svg";
+import addImg from "../assets/add.svg";
+import saveImg from "../assets/save.svg";
 // Popup
 import Popup from "./popup/Popup";
 // Images
-import deleteImg from "../assets/delete.png";
+import deleteImg from "../assets/delete.svg";
 
 const Fichas = () => {
   function PopupContent() {

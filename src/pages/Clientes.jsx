@@ -3,7 +3,7 @@ import Main from "../layout/Main";
 // Styles
 import "../styles/page.css";
 // Images
-import filterImg from "../assets/filter.png";
+import filterImg from "../assets/filter.svg";
 
 function Clientes() {
   return (
