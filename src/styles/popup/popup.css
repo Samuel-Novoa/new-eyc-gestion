@@ -1,0 +1,175 @@
+.popup {
+  /* position: fixed; */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-dark-light);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 100;
+  transition: 0.5s ease-in;
+  text-align: left !important;
+}
+
+.popup-inner {
+  position: relative;
+  padding: 0px 32px;
+  /* width: 100%; */
+  background-color: #fff;
+  border-radius: 10px;
+  color: var(--color-dark);
+  text-align: left !important;
+}
+
+.popup-inner .close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 30px;
+  padding: 0px;
+  background: none;
+}
+
+.popup-content {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  height: 2.5rem;
+  margin: 0.6rem 0rem;
+  gap: 2rem;
+}
+
+.col-3 {
+  flex: 0 0 13%;
+  max-width: 13%;
+}
+
+.col-6 {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.offset-6 {
+  margin-left: 50%;
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-idt {
+  max-width: 80px;
+}
+
+.input-servicio {
+  max-width: 300px;
+}
+
+.btn-add {
+  background-color: var(--color-gold-dark);
+  color: var(--color-white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: var(--color-gray-light);
+  color: var(--color-dark);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: var(--color-gold-dark);
+  color: var(--color-white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-remove {
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.table .input-idt {
+  max-width: 80px;
+}
+
+.table .input-servicio {
+  max-width: 300px;
+}
+
+.table input {
+  margin: 0px;
+}
+
+#table_actions_buttons {
+  display: flex;
+  justify-content: center;
+}
+/* 
+#add_row_button {
+  border-radius: 100px;
+} */

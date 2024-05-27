@@ -1,14 +1,3 @@
-:root {
-  /* Colors */
-  --color-white: #fff;
-  --color-gold-light: #f4df56;
-  --color-gold-dark: #f2c744;
-  --color-brown: #c29c46;
-  --color-dark-light: #120f0c;
-  --color-dark: #050006;
-  --color-gray: #ccccccd2;
-}
-
 /* Estilos para fijar el nav y abarcar todo el ancho */
 nav {
   position: fixed;
@@ -35,7 +24,7 @@ nav {
 
 /* Agregar un margen superior equivalente a la altura del nav */
 body {
-  margin-top: 60px;
+  margin-top: 6rem;
 }
 
 /* Estilos del navbar */
@@ -100,6 +89,10 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  /* body {
+    margin-top: 9rem;
+  } */
+
   nav {
     padding: 10px;
     display: block;

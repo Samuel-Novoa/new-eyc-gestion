@@ -1,14 +1,3 @@
-:root {
-  /* Colors */
-  --color-white: #fff;
-  --color-gold-light: #f4df56;
-  --color-gold-dark: #f2c744;
-  --color-brown: #c29c46;
-  --color-dark-light: #120f0c;
-  --color-dark: #050006;
-  --color-gray: #ccccccd2;
-}
-
 .page-header {
   display: flex;
   gap: 20px;
