@@ -59,7 +59,6 @@
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
-  padding: 0 10px;
 }
 
 .text-center {
@@ -67,7 +66,7 @@
 }
 
 .offset-6 {
-  margin-left: 50%;
+  margin-left: 19rem;
   display: flex;
   gap: 10px;
 }
@@ -94,6 +93,8 @@ input[type="text"] {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+  width: 3rem;
+  display: flex;
 }
 
 .btn-secondary {
@@ -139,6 +140,9 @@ input[type="text"] {
 .table td {
   padding: 10px;
   text-align: left;
+}
+
+.table tr {
   border-bottom: 1px solid #ddd;
 }
 
@@ -165,11 +169,18 @@ input[type="text"] {
   margin: 0px;
 }
 
+.table-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 #table_actions_buttons {
   display: flex;
   justify-content: center;
 }
-/* 
-#add_row_button {
-  border-radius: 100px;
-} */
+
+@media (max-width: 768px) {
+  .offset-6 {
+    margin: 0px;
+  }
+}

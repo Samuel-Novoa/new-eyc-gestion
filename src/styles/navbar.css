@@ -42,6 +42,7 @@ body {
   border: none;
   cursor: pointer;
   display: none;
+  width: auto;
 }
 
 .icon-bar {

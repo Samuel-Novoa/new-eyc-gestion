@@ -92,7 +92,7 @@ const Login = () => {
             </div>
           </form>
 
-          <p className="text-sm text-white text-center">
+          <p className="text-sm text-white">
             No account yet? <NavLink to="/signup">Sign up</NavLink>
           </p>
         </div>
