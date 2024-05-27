@@ -35,10 +35,10 @@
 
   /* Colors Variables */
   --color-white: #fff;
-  --color-gold-light: #F4DF56;
-  --color-gold-dark: #F2C744;
-  --color-brown: #C29C46;
-  --color-dark-light: #120F0C;
+  --color-gold-light: #f4df56;
+  --color-gold-dark: #f2c744;
+  --color-brown: #c29c46;
+  --color-dark-light: #120f0c;
   --color-dark: #050006;
   --color-gray-light: #eeeded;
 }
@@ -71,9 +71,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+/* button:hover {
   border-color: #646cff;
-}
+} */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
