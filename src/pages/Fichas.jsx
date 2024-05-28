@@ -7,7 +7,7 @@ import addImg from "../assets/add.svg";
 // Popup
 import Popup from "./popup/Popup";
 // Popup content
-import AddFichasPopUp from "./popup/conents/AddFichasPopUp";
+import AddFichasPopUp from "./popup/conents/add/AddFichasPopUp";
 
 const Fichas = () => {
   const [buttonPopup, setButtonPopup] = useState(false);

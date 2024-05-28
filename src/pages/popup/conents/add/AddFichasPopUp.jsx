@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 // Images
-import clockImg from "../../../assets/clock.svg";
-import addImg from "../../../assets/add.svg";
-import saveImg from "../../../assets/save.svg";
-import deleteImg from "../../../assets/delete.svg";
+import clockImg from "../../../../assets/clock.svg";
+import addImg from "../../../../assets/add.svg";
+import saveImg from "../../../../assets/save.svg";
+import deleteImg from "../../../../assets/delete.svg";
 
 function AddFichasPopUp() {
   const [rows, setRows] = useState([
