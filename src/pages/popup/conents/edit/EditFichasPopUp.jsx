@@ -5,7 +5,7 @@ import addImg from "../../../../assets/add.svg";
 import saveImg from "../../../../assets/save.svg";
 import deleteImg from "../../../../assets/delete.svg";
 
-function AddFichasPopUp() {
+function EditFichasPopUp() {
   const [rows, setRows] = useState([
     { idt: "", servicio: "", precio: "" },
     { idt: "", servicio: "", precio: "" },
@@ -40,15 +40,7 @@ function AddFichasPopUp() {
       <div className="popup-content">
         <div className="row">
           <div className="col-6">
-            <h3>Agregar Ficha</h3>
-          </div>
-          <div className="col-6">
-            <input
-              type="text"
-              placeholder="Número de ficha"
-              className="id-ficha"
-              readOnly
-            />
+            <h3>Ficha #<span id="id_ficha">000</span></h3>
           </div>
         </div>
         <div className="row">
@@ -148,4 +140,4 @@ function AddFichasPopUp() {
   );
 }
 
-export default AddFichasPopUp;
+export default EditFichasPopUp;

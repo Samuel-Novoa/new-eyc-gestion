@@ -33,7 +33,7 @@ input {
   color: var(--color-dark-light);
   font-weight: 500;
   padding: 10px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 5px;
   background-color: var(--color-white);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
@@ -47,7 +47,8 @@ input {
 input:focus-visible {
   outline-style: none;
   border: 2px solid var(--color-gold-light);
-  transition: 0.5s;
+  transition: 0.2s;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 input::placeholder {

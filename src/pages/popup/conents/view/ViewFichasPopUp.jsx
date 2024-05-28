@@ -4,59 +4,30 @@ import clockImg from "../../../../assets/clock.svg";
 import addImg from "../../../../assets/add.svg";
 import saveImg from "../../../../assets/save.svg";
 import deleteImg from "../../../../assets/delete.svg";
+import editImg from "../../../../assets/edit.svg";
 
-function AddFichasPopUp() {
-  const [rows, setRows] = useState([
+function ViewFichasPopUp() {
+  const [rows] = useState([
     { idt: "", servicio: "", precio: "" },
     { idt: "", servicio: "", precio: "" },
     { idt: "", servicio: "", precio: "" },
     { idt: "", servicio: "", precio: "" },
   ]);
-  const [disableAddButton, setDisableAddButton] = useState(false);
-
-  const addRow = () => {
-    if (rows.length < 20) {
-      setRows([...rows, { idt: "", servicio: "", precio: "", acciones: "" }]);
-    } else {
-      setDisableAddButton(true);
-      alert("No se pueden agregar más de 15 filas");
-    }
-  };
-
-  const handleChange = (index, field, value) => {
-    const updatedRows = [...rows];
-    updatedRows[index][field] = value;
-    setRows(updatedRows);
-  };
-
-  const removeRow = (index) => {
-    const updatedRows = [...rows];
-    updatedRows.splice(index, 1);
-    setRows(updatedRows);
-  };
 
   return (
     <>
       <div className="popup-content">
         <div className="row">
           <div className="col-6">
-            <h3>Agregar Ficha</h3>
-          </div>
-          <div className="col-6">
-            <input
-              type="text"
-              placeholder="Número de ficha"
-              className="id-ficha"
-              readOnly
-            />
+            <h3>Ficha #<span id="id_ficha">000</span></h3>
           </div>
         </div>
         <div className="row">
           <div className="col-6">
-            <input type="text" placeholder="Nombre del cliente" />
+            <input type="text" placeholder="Nombre del cliente" readOnly/>
           </div>
           <div className="col-6">
-            <input type="text" placeholder="Identificación (C.C.)" />
+            <input type="text" placeholder="Identificación (C.C.)" readOnly/>
           </div>
         </div>
         <div className="table-container">
@@ -66,7 +37,6 @@ function AddFichasPopUp() {
                 <th>IDT</th>
                 <th>Servicio</th>
                 <th>Precio</th>
-                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -81,6 +51,8 @@ function AddFichasPopUp() {
                       }
                       className="input-idt"
                       id="table_idt_input"
+
+                      readOnly
                     />
                   </td>
                   <td id="table_service_column">
@@ -92,6 +64,8 @@ function AddFichasPopUp() {
                       }
                       className="input-servicio"
                       id="table_service_input"
+
+                      readOnly
                     />
                   </td>
                   <td id="table_price_column">
@@ -103,16 +77,9 @@ function AddFichasPopUp() {
                       }
                       className="input-precio"
                       id="table_price_input"
+
+                      readOnly
                     />
-                  </td>
-                  <td id="table_actions_buttons">
-                    <button
-                      onClick={() => removeRow(index)}
-                      className="btn-remove"
-                      id="table_accion_delete_button"
-                    >
-                      <img src={deleteImg} alt="Delete image" />
-                    </button>
                   </td>
                 </tr>
               ))}
@@ -120,26 +87,14 @@ function AddFichasPopUp() {
           </table>
         </div>
         <div className="row">
-          <div className="col-12">
-            <button
-              onClick={addRow}
-              className="btn-add"
-              id="add_row_button"
-              disabled={disableAddButton}
-            >
-              <img src={addImg} alt="Add row image" />
-            </button>
-          </div>
-        </div>
-        <div className="row">
           <div className="col-6 offset-6">
             <button className="btn-secondary">
-              <img src={clockImg} alt="Wait image" height={"20px"} />
-              Espera
+              <img src={deleteImg} alt="Delete image" height={"20px"} />
+              Eliminar
             </button>
             <button className="btn-primary">
-              <img src={saveImg} alt="Save image" height={"20px"} />
-              Guardar
+              <img src={editImg} alt="Edit image" height={"20px"} />
+              Editar
             </button>
           </div>
         </div>
@@ -148,4 +103,4 @@ function AddFichasPopUp() {
   );
 }
 
-export default AddFichasPopUp;
+export default ViewFichasPopUp;

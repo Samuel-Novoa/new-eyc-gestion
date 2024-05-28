@@ -2,21 +2,21 @@ import React from "react";
 // Images
 import saveImg from "../../../../assets/save.svg";
 
-function AddPersonalPopUp() {
+function EditClientesPopUp() {  
   return (
     <>
       <div className="popup-content">
         <div className="row">
           <div className="col-6">
-            <h3>Agregar Personal</h3>
+            <h3>Edit Cliente</h3>
           </div>
         </div>
         <div className="row">
           <div className="col-6">
-            <input type="number" placeholder="Id de la persona" />
+            <input type="text" placeholder="Nombre del cliente" />
           </div>
           <div className="col-6">
-            <input type="text" placeholder="Nombre de la persona" />
+            <input type="text" placeholder="Identificación (C.C.)" />
           </div>
         </div>
         <div className="row">
@@ -32,4 +32,4 @@ function AddPersonalPopUp() {
   );
 }
 
-export default AddPersonalPopUp;
+export default EditClientesPopUp;

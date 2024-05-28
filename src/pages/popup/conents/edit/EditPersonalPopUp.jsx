@@ -2,13 +2,13 @@ import React from "react";
 // Images
 import saveImg from "../../../../assets/save.svg";
 
-function AddPersonalPopUp() {
+function EditPersonalPopUp() {
   return (
     <>
       <div className="popup-content">
         <div className="row">
           <div className="col-6">
-            <h3>Agregar Personal</h3>
+            <h3>Editar Personal</h3>
           </div>
         </div>
         <div className="row">
@@ -32,4 +32,4 @@ function AddPersonalPopUp() {
   );
 }
 
-export default AddPersonalPopUp;
+export default EditPersonalPopUp;

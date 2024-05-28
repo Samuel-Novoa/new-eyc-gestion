@@ -7,9 +7,16 @@ import addImg from "../assets/add.svg";
 import Popup from "./popup/Popup";
 // Popup content
 import AddClientesPopUp from "./popup/conents/add/AddClientesPopUp";
+import EditClientesPopUp from "./popup/conents/edit/EditClientesPopUp";
+import ViewClientesPopUp from "./popup/conents/view/ViewClientesPopUp";
 
 function Clientes() {
-  const [buttonPopup, setButtonPopup] = useState(false);
+  // Popup buttons add
+  const [buttonAddPopup, setButtonAddPopup] = useState(false);
+  // Popup buttons edit
+  const [buttonEditPopup, setButtonEditPopup] = useState(false);
+  // Popup buttons view
+  const [buttonViewPopup, setButtonViewPopup] = useState(false);
 
   return (
     <Main>
@@ -20,15 +27,31 @@ function Clientes() {
             <img src={filterImg} alt="Filter Image" height={"15px"} />
             Filtrar
           </button>
-          <button className="button-action" onClick={() => setButtonPopup(true)} id="button_action_add">
+          <button className="button-action" onClick={() => setButtonAddPopup(true)} id="button_action_add">
             <img src={addImg} alt="Add Image" height={"15px"} />
             Agregar
           </button>
         </div>
       </div>
+      <button
+        className="button-action"
+        id="button_action_edit"
+        onClick={() => setButtonEditPopup(true)}
+      >
+        TESTING EDIT
+      </button>
+      <button className="button-action" id="button_action_view" onClick={() => setButtonViewPopup(true)}>
+        TESTING VIEW
+      </button>
       {/* Popup */}
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+      <Popup trigger={buttonAddPopup} setTrigger={setButtonAddPopup}>
         <AddClientesPopUp />
+      </Popup>
+      <Popup trigger={buttonEditPopup} setTrigger={setButtonEditPopup}>
+        <EditClientesPopUp />
+      </Popup>
+      <Popup trigger={buttonViewPopup} setTrigger={setButtonViewPopup}>
+        <ViewClientesPopUp />
       </Popup>
     </Main>
   );
